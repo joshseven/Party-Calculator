@@ -1,0 +1,21 @@
+h1{
+    background: linear-gradient(#00ccff,#b3f0ff);
+    text-align: center;
+}
+
+body {
+    margin: 50px;
+}
+
+p{
+    font:bold;
+    font-size: 2em;
+}
+
+.Wine {
+    font-size: 1em;
+}
+
+.beerz {
+    padding: 10px;
+}
