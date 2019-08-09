@@ -25,7 +25,7 @@ formWine.addEventListener('submit',function(eventWine){
         hoursWine++;
         var resultWine = ((guestsWine * hoursWine) * .5) /5 ;
 
-        resultFieldWine.innerText = "The number of  wine bottles: " + resultWine;
+        resultFieldWine.innerText = "The number of wine bottles: " + resultWine;
         eventWine.preventDefault();
     }
 });
@@ -40,7 +40,7 @@ formBeer.addEventListener('submit',function(eventBeer){
         hoursBeer++;
         var resultBeer = ((guestsBeer * hoursBeer) * .3);
     
-        resultFieldBeer.innerText = "The number of  beer bottles: " + resultBeer;
+        resultFieldBeer.innerText = "The number of beer bottles: " + resultBeer;
         eventBeer.preventDefault();
         }
     });
@@ -55,7 +55,7 @@ formSpirits.addEventListener('submit',function(eventSpirits){
         hoursSpirits++;
         var resultSpirits = ((guestsSpirits * hoursSpirits) * .2) /15 ;
         
-        resultFieldSpirits.innerText = "The number of  sprits bottles: " + resultSpirits;
+        resultFieldSpirits.innerText = "The number of sprits bottles: " + resultSpirits;
         eventSpirits.preventDefault();
         }
 });
