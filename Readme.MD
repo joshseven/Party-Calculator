@@ -10,3 +10,11 @@ Version 1 comlete
 
 Issues / Bugs
 - Program does not function correctly on my home computer (chrome), but works on all other systems.
+
+Version 2 complete
+-Added new component to calculate individual drinking portions
+-used Math.round to get more realistic drink amount requirement
+
+version 3
+-Work on style and presentation
+-Make mobile friendly
