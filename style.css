@@ -24,3 +24,11 @@ label {
     font:bold;
 }
 
+img{
+  width: 150px;
+  height: 150px;
+  float: right;
+  margin: 15px auto;
+  display: block;
+}
+
