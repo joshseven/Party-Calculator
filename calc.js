@@ -1,62 +1,46 @@
-var wineField1 = document.getElementById('wineField1');
-var wineField2 = document.getElementById('wineField2');
+var numField1 = document.getElementById('numField1');
+var numField2 = document.getElementById('numField2');
 
-var beerField1 = document.getElementById('beerField1');
-var beerField2 = document.getElementById('beerField2');
+var resultFieldWine1 = document.getElementById('resultFieldWine1');
+var resultFieldBeer1 = document.getElementById('resultFieldBeer1');
+var resultFieldSpirits2 = document.getElementById('resultFieldSpirits1');
 
-var spiritsField1 = document.getElementById('spiritsField1');
-var spiritsField2 = document.getElementById('spiritsField2');
+var resultFieldWine2 = document.getElementById('resultFieldWine2');
+var resultFieldBeer2 = document.getElementById('resultFieldBeer2');
 
-var resultFieldWine = document.getElementById('resultFieldWine');
-var resultFieldBeer = document.getElementById('resultFieldBeer');
-var resultFieldSpirits = document.getElementById('resultFieldSpirits');
+var form = document.getElementById('calculation');
 
-var formWine = document.getElementById('wineCalculation');
-var formBeer = document.getElementById('beerCalculation');
-var formSpirits = document.getElementById('spiritsCalculation');
+// Wine beer, spirits calculation
+form.addEventListener('submit', function(event){
 
-// Wine calculation
-formWine.addEventListener('submit',function(eventWine){
-    if (!wineField1.value || !wineField2.value) {
+    if (!numField1.value || !numField2.value) {
         alert("Please enter values in fields");
     } else {
-        var guestsWine = parseFloat(wineField1.value);
-        var hoursWine = parseFloat(wineField2.value);
-        hoursWine++;
-        var resultWine = ((guestsWine * hoursWine) * .5) /5 ;
+        var totalGuests = parseFloat(numField1.value);
+        var totalHours = parseFloat(numField2.value);
+        totalHours++;
 
-        resultFieldWine.innerText = "The number of wine bottles: " + resultWine;
-        eventWine.preventDefault();
+        var resultWine1 = (((totalGuests * totalHours) * .5) / 5);
+        var resultBeer1 = ((totalGuests * totalHours) * .3);
+          var resultSpirits1 = ((totalGuests * totalHours) * .2) /15;
+
+// Wine Beer Calculation
+        var resultWine2 = (((totalGuests * totalHours) * .6) / 5);
+        var resultBeer2 = ((totalGuests * totalHours) * .4);
+        
+
+        resultFieldWine1.innerText = "Total: " + resultWine1 + " bottles of wine or "+ (resultWine1 /12)+ " cases of wine.";
+         resultFieldBeer1.innerText = "Total: " + resultBeer1 + " bottles of beer or " + (resultBeer1 /24)+ " cases of beer.";
+         resultFieldSpirits1.innerText = "Total: " + resultSpirits1 + " bottles of spirits.";
+         
+
+         
+        resultFieldWine2.innerText = "Total: " + resultWine2 + " bottles of wine or "+ (resultWine2 /12)+ " cases of wine.";
+        resultFieldBeer2.innerText = "Total: " + resultBeer2 + " bottles of beer or " + (resultBeer2 /24)+ " cases of beer.";
+        
+        event.preventDefault();
     }
 });
 
-// // Beer Calulation
-formBeer.addEventListener('submit',function(eventBeer){
-    if (!beerField1.value || !beerField2.value){
-        alert("Please enter values in fields");
-    } else {
-        var guestsBeer = parseFloat(beerField1.value);
-        var hoursBeer = parseFloat(beerField2.value);
-        hoursBeer++;
-        var resultBeer = ((guestsBeer * hoursBeer) * .3);
-    
-        resultFieldBeer.innerText = "The number of beer bottles: " + resultBeer;
-        eventBeer.preventDefault();
-        }
-    });
 
-// Sprits Calculation
-formSpirits.addEventListener('submit',function(eventSpirits){
-    if (!spiritsField1.value || !spiritsField2.value){
-            alert("Please enter values in fields");
-    } else {
-        var guestsSpirits = parseFloat(spiritsField1.value);
-        var hoursSpirits = parseFloat(spiritsField2.value);
-        hoursSpirits++;
-        var resultSpirits = ((guestsSpirits * hoursSpirits) * .2) /15 ;
-        
-        resultFieldSpirits.innerText = "The number of sprits bottles: " + resultSpirits;
-        eventSpirits.preventDefault();
-        }
-});
 
